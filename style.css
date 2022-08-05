@@ -13,7 +13,10 @@ img {
 }
 
 p {
-    margin-top: 93%;
+    margin-top: 90%;
     position: relative;
     text-align: center;
+    text-shadow: 5px 5px 5px black;
+    font-size: 30px;
+    color: white;
 }

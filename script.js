@@ -5,15 +5,19 @@ memeTextInput.addEventListener('keyup', function() {
     textParagraph.innerText = memeTextInputValue;
 })
 
-let memeImage = document.getElementById('meme-insert');
-memeImage.addEventListener('change', function(){
-    console.log(memeImage);
-    let container = document.getElementById('meme-image-container');
-    container.style.background = memeImage.value;
-})
-
 function fileUpload (event) {
     let memeImage = document.getElementById('meme-image');
     memeImage.src = URL.createObjectURL(event.target.files[0]); //https://stackoverflow.com/questions/33920409/how-to-get-local-filename-using-url-createobjecturl
+}
 
+let previewBoard = document.getElementById('meme-image-container');
+function fireBoard() {
+    previewBoard.style.border = 'red dashed 3px';
+}
+
+function waterBoard() {
+    previewBoard.style.border = 'blue double 5px';
+}
+function earthBoard() {
+    previewBoard.style.border = 'green groove 6px';
 }

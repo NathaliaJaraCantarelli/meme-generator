@@ -21,3 +21,11 @@ function waterBoard() {
 function earthBoard() {
     previewBoard.style.border = 'green groove 6px';
 }
+
+let containerMemesImgs = document.getElementById('container-memes').children;
+for (let index = 0; index < containerMemesImgs.length; index += 1) {
+    containerMemesImgs[index].addEventListener('click', function(){
+        let memeImageMeme = document.getElementById('meme-image');
+        memeImageMeme.src = './imgs/' + containerMemesImgs[index].className + '.png';
+    })
+}
